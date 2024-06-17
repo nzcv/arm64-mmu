@@ -14,6 +14,7 @@ globalfunc entry2
     MSR     VBAR_EL2, x0
     ADRP    x0, _stack_start
     MOV     sp, x0
+    BL      mmu_on
     BL      main
     B       .
 endfunc entry2

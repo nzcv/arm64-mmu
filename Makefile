@@ -37,7 +37,7 @@ fOUT := out.elf
 CC := ${CROSS_COMPILE}gcc
 AS := ${CROSS_COMPILE}gcc
 LD := ${CROSS_COMPILE}ld
-
+OBJDUMP := ${CROSS_COMPILE}objdump
 
 #
 # Compiler, assembler, and linker flags
@@ -79,5 +79,6 @@ ${dOUT}/%.o: ${dSRC}/%.c
 ${dOUT}/%.o: ${dSRC}/%.S
 	$(AS) $(AS_FLAGS) -c $< -o $@
 
-${fOUT}: ${OBJECTS} linker.ld
+${fOUT}: ${OBJECTS}
 	${LD} $^ -o $@ ${LD_FLAGS}
+	${OBJDUMP} -D -m aarch64 out.elf > mmu.dis

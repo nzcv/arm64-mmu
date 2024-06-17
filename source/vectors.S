@@ -51,7 +51,7 @@ dummy_c_fiq_sp0:      B   .
     .align 7
 dummy_c_serror_sp0:   B   .
     .align 7
-dummy_c_sync_spx:     B   .
+dummy_c_sync_spx:     RET
     .align 7
 dummy_c_irq_spx:      B   .
     .align 7

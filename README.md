@@ -4,3 +4,6 @@
 
 纸上得来终觉浅, 觉知此事要躬行. 这个示例程序可以详细演示MMU的转换和配置过程, 最终通过手动计算理解MMU的用意.
 
+# Thanks
+
+https://github.com/ashwio/arm64-hypervisor-tutorial
